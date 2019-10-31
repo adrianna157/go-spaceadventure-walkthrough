@@ -1,10 +1,10 @@
 package main
+// When applied  
 
 import "fmt"
 
 func main() {
 	printWelcome()
-	name := getName()
 	printGreeting(name)
 	fmt.Println("Let's go on an adventure!")
 	travel()
