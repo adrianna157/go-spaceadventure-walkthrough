@@ -1,11 +1,13 @@
 package main
-// When applied  
+
+// When applied
 
 import "fmt"
 
 func main() {
 	printWelcome()
-	printGreeting(name)
+	name :=
+		printGreeting(getnName())
 	fmt.Println("Let's go on an adventure!")
 	travel()
 }
@@ -15,11 +17,11 @@ func printWelcome() {
 	fmt.Println("There are 8 planets to explore.")
 }
 
-func getName() string{
+func getName() string {
 	var name string
 	fmt.Println("What is your name?")
-    fmt.Scan(&name)
-    return name
+	fmt.Scan(&name)
+	return name
 }
 
 func printGreeting(name string) {
@@ -41,8 +43,8 @@ func travel() {
 	}
 }
 
-func getTravelChoice() string {
-	var choice string
+func getPlanetName(prompt string) string {
+	var name string
 	fmt.Println("Shall I randomly choose a planet for you to visit? (Y or N)")
 	fmt.Scan(&choice)
 	return choice
@@ -53,7 +55,7 @@ func travelToRandomPlanet() {
 	fmt.Println("Arrived at Jupiter. The large red spot appears ominous.")
 }
 
-func getPlanetName() string {
+func getPlanetName(prompt string) string {
 	var name string
 	fmt.Println("Name the planet you would like to visit.")
 	fmt.Scan(&name)
