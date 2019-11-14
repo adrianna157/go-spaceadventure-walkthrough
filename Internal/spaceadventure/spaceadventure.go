@@ -18,9 +18,9 @@ func main() {
 	// travel()
 }
 
-func printWelcome() {
-	fmt.Println("Welcome to the %s!", planetarySystem.Name)
-	fmt.Println("There are %d planets to explore.")
+func printWelcome(planetarySystem PlanetarySystem) {
+	fmt.Println("Welcome to the %s!/n", planetarySystem.Name)
+	fmt.Printf("There are %d planets to explore./n", planetarySystem.NumberOfPlanets())
 }
 
 func getName() string {
@@ -61,7 +61,7 @@ func getResponse(prompt string) string {
 	var response string
 	fmt.Println(prompt)
 	fmt.Scan(&response)
-	return response
+	return 
 }
 
 func travelToRandomPlanet() {
